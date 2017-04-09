@@ -91,7 +91,9 @@ forms."
         for attr = (if *downcase-tokens-p*
                      (string-downcase orig-attr)
                      (string orig-attr))
-        unless (null val) ;; no attribute at all if VAL is NIL
+        unless (or (when (and (consp val) (member (car val) '(htm str raw)))
+                     (error "The macro invocation ~S cannot appear in attribute context." val))
+                   (null val)) ;; no attribute at all if VAL is NIL
           if (constantp val)
             if (and (eq *html-mode* :sgml) (eq val t)) ; special case for SGML
               nconc (list (-raw- #\ ) (-raw- attr))
