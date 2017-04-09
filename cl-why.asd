@@ -27,9 +27,10 @@
 ;;; NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 ;;; SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-(asdf:defsystem :cl-why
+(defsystem :cl-why
   :description "(X)HTML generation macros"
   :version "1.1.4"
+  :licence "BSD"
   :serial t
   :components ((:file "packages")
                (:file "specials")
@@ -37,6 +38,7 @@
                (:file "why")))
 
 (defsystem :cl-why-test
+  :licence "BSD"
   :depends-on (:cl-why :flexi-streams)
   :components ((:module "test"
                         :serial t
