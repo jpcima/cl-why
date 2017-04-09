@@ -40,3 +40,6 @@ Instead of a complete documentation I make a list of differences between these t
       CL-WHO: "<body>abc</body>"
 
 - Removed macros *str* and *fmt*, found no longer useful or redundant
+
+- Conditional compilation is updated for recent Common Lisp implementations
+  - *ELEMENT-TYPE* support added in SBCL and ECL
