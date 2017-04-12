@@ -30,6 +30,7 @@
 (defsystem :cl-why
   :description "(X)HTML generation macros"
   :version "1.1.4"
+  :author "JP Cimalando"
   :licence "BSD"
   :serial t
   :components ((:file "packages")
@@ -38,6 +39,9 @@
                (:file "why")))
 
 (defsystem :cl-why-test
+  :description "(X)HTML generation macros"
+  :version "1.1.4"
+  :author "JP Cimalando"
   :licence "BSD"
   :depends-on (:cl-why :flexi-streams)
   :components ((:module "test"
